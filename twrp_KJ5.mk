@@ -22,26 +22,24 @@ PRODUCT_RELEASE_NAME := KJ5
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Virtual A/B OTA
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-
-# Enable project quotas and casefolding for emulated storage without sdcardfs
-$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Inherit from KJ5 device
-$(call inherit-product, device/tecno/KJ5/device.mk)
+$(call inherit-product, device/Tecno/KJ5/device.mk)
 
 # Inherit some common TWRP stuff
 $(call inherit-product, vendor/twrp/config/common.mk)
+
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := KJ5
 PRODUCT_NAME := twrp_KJ5
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO KJ5
-PRODUCT_MANUFACTURER := tecno
+PRODUCT_MANUFACTURER := TECNO
 
-PRODUCT_GMS_CLIENTID_BASE := android-tecno
+PRODUCT_BUILD_PROP_OVERRIDES += \
+PRIVATE_BUILD_DESC="vnd_kj5_h6931-user 12 SP1A.210812.016 510947 release-keys"
+
+BUILD_FINGERPRINT := TECNO/KJ5-OP/TECNO-KJ5n:12/SP1A.210812.016/231225V534:user/release-keys
