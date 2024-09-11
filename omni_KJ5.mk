@@ -34,12 +34,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Inherit from KJ5 device
 $(call inherit-product, device/tecno/KJ5/device.mk)
 
-# Inherit some common TWRP stuff
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Inherit some common pb stuff
+$(call inherit-product, vendor/pb/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := KJ5
-PRODUCT_NAME := twrp_KJ5
+PRODUCT_NAME := omni_KJ5
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO KJ5
 PRODUCT_MANUFACTURER := tecno
