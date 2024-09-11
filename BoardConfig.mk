@@ -115,7 +115,6 @@ BOARD_ROOT_EXTRA_FOLDERS += metadata tranfs
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 
 # Dynamic Partitions
-
 BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_PARTITION_LIST := system vendor product system_ext
 BOARD_MAIN_SIZE := 9122611200
@@ -146,9 +145,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 TW_NO_LEGACY_PROPS := true
 
-# TWRP Configuration
-TW_BACKUP_EXCLUSIONS := /Files/fonts
-TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := true
 
 # MTP
@@ -162,13 +158,14 @@ TW_INCLUDE_FASTBOOTD := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USE_LOGD := true
 
-# Tools / Resetprop and magiskboot
+# Twrp configuration 
 TW_USE_TOOLBOX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_BASH := true
 TW_EXCLUDE_TZDATA := true
 TW_NO_FASTBOOT_BOOT := true
+TW_NO_REBOOT_BOOTLOADER := true
 TW_EXCLUDE_PYTHON := true
 TW_EXCLUDE_NANO := true
 TW_EXCLUDE_TWRPAPP := true
@@ -181,26 +178,16 @@ TW_INCLUDE_LIBRESETPROP :=true
 TW_INCLUDE_REPACK_TOOL := true
 TWHAVE_SELINUX := true
 TW_INCLUDE_LPTOOLS := true
-
-
-# TWRP-Specific configuration
 TW_EXCLUDE_APEX := true
-
-# Density / StatusBar
+TW_EXCLUDE_EXTRA_LANGUAGE := true
 TW_FRAMERATE := 90
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_MAX_BRIGHTNESS := 2047
+TW_MAX_BRIGHTNESS := 1024
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_THEME := portrait_hdpi
 TARGET_SCREEN_DENSITY := 320
-
-# StatusBar
-TW_STATUS_ICONS_ALIGN := center
-TW_CUSTOM_CPU_POS := "300"
-TW_CUSTOM_CLOCK_POS := "70"
-TW_CUSTOM_BATTERY_POS := "790"
 
 # Crypto
 #TW_INCLUDE_CRYPTO := true
@@ -209,7 +196,4 @@ TW_CUSTOM_BATTERY_POS := "790"
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
-TW_USE_EXTERNAL_STORAGE := true
-
-# Device 
-TW_DEVICE_VERSION := MADE by R3NZPH
+TW_USE_EXTERNAL_STORAGE := false
