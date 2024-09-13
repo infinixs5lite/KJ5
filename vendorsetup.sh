@@ -40,7 +40,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export TARGET_DEVICE_ALT="KJ5,KJ5n"
       export OF_MAINTAINER="NINO"
 
-    export OF_AB_DEVICE=1
+    export FOX_AB_DEVICE=1
     export OF_USE_MAGISKBOOT=1
     export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 
