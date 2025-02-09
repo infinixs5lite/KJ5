@@ -25,6 +25,17 @@ DEVICE_PATH := device/tecno/KJ5
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    system \
+    product \
+    system_ext \
+    vendor \
+    vbmeta_system \
+    vbmeta_vendor \
+    boot
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
