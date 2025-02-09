@@ -21,7 +21,7 @@ $(call inherit-product, device/tecno/KJ5/device.mk)
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := KJ5
 PRODUCT_NAME := twrp_KJ5
-PRODUCT_BRAND := TECNO Spark 20
+PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO KJ5
 PRODUCT_MANUFACTURER := TECNO
 
